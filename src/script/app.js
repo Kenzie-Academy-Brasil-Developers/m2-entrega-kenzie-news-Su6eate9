@@ -4,14 +4,14 @@ async function getNews(){
 }
 const apiProducts = await getNews()
 
-const main = document.querySelector(".main__content")
-const sectionPrime = document.createElement("section")
-sectionPrime.classList.add("main__image")
-const sectionNews  = document.createElement("section") 
-sectionNews.classList.add("main__content-section")
-
 class createCards{
     static async cards(){
+        const main = document.querySelector(".main__content")
+        const sectionPrime = document.createElement("section")
+        sectionPrime.classList.add("main__image")
+        const sectionNews  = document.createElement("section") 
+        sectionNews.classList.add("main__content-section")
+
         apiProducts.forEach((element,i) => {
             if(i == 0){
                 const imgPrime = document.createElement("img")
